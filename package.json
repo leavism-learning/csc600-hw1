@@ -5,7 +5,7 @@
   "main": "hw1.js",
   "scripts": {
     "test": "jest tests/hw1.test.ts",
-    "start": "tsc --strict --target es2019 --module commonjs hw1.ts && node hw1.js"
+    "start": "tsc --strict --target es2019 --module commonjs --outDir dist hw1.ts && node dist/hw1.js"
   },
   "author": "",
   "license": "ISC",

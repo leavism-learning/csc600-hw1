@@ -80,7 +80,12 @@ Example:
 ** ----------------------------------------------------- */
 
 export function multArray(arr: number[]): number {
-  throw Error('TODO');
+  let result = 1;
+
+  for (let i = 0; i < arr.length; i++) {
+    result *= arr[i];
+  }
+  return result;
 }
 
 /* ----------------------------------------------------- **

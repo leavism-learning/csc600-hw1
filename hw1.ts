@@ -104,7 +104,11 @@ Example:
 ** ----------------------------------------------------- */
 
 export function maxArray(arr: number[]): number {
-  throw Error('TODO');
+  if (!arr.length) {
+    return Number.POSITIVE_INFINITY;
+  }
+
+  return Math.max(...arr);
 }
 
 /* ----------------------------------------------------- **
@@ -126,7 +130,19 @@ Example:
 ** ----------------------------------------------------- */
 
 export function longestWord(arr: string[]): string {
-  throw Error('TODO');
+  if (!arr.length) {
+    return '';
+  }
+
+  let longest: string = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length >= longest.length) {
+      longest = arr[i];
+    }
+  }
+
+  return longest;
 }
 
 /* ----------------------------------------------------- **
@@ -147,7 +163,19 @@ Example:
 ** ----------------------------------------------------- */
 
 export function shortestWord(arr: string[]): string {
-  throw Error('TODO');
+  if (!arr.length) {
+    return '';
+  }
+
+  let shortest: string = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i].length < shortest.length) {
+      shortest = arr[i];
+    }
+  }
+
+  return shortest;
 }
 
 /* ----------------------------------------------------- **

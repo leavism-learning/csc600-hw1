@@ -37,16 +37,14 @@ https://docs.google.com/document/d/17CNgY4VPNsYECnZKgZJnb6NAIJFn4k0IIBe5yl6XdNY/
 
 ** ============================================================================ */
 
-
 /* ==========================================================================  **
 ## AI Copilot
 ** ============================================================================ */
 
 // If you used any resources, please list them here
 export const AI_COPILOT_HISTORY = [
-  "https://chat.openai.com/c/", // TODO: please paste the link to your AI CoPilot history here
+  'https://chat.openai.com/c/', // TODO: please paste the link to your AI CoPilot history here
 ];
-
 
 /* ==========================================================================  **
 ## 1. Fun with TypeScript Arrays (40 pts)
@@ -66,7 +64,6 @@ for (const x of arr) {
 >> 3
 ** ============================================================================ */
 
-
 /* ----------------------------------------------------- **
 ### 1a. Complete the function definition below. (8 pts)
 
@@ -83,9 +80,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function multArray(arr: number[]): number {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 1b. Complete the function definition below. (8 pts)
@@ -103,9 +99,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function maxArray(arr: number[]): number {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 1c. Complete the function definition below. (8 pts)
@@ -126,9 +121,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function longestWord(arr: string[]): string {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 1d. Complete the function definition below. (8 pts)
@@ -148,9 +142,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function shortestWord(arr: string[]): string {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 1e. Complete the function definition below. (8 pts)
@@ -174,9 +167,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function shortestAndLongestWord(arr: string[]): [string, string] {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ==========================================================================  **
 ## 2. Pure Functions (30 pts)
@@ -223,9 +215,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function impureNegate(arr: number[]): void {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 2b. Complete the function definition below. (10 pts)
@@ -260,9 +251,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function copyNumArray(arr: number[]): number[] {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 2c. Complete the function definition below. (10 pts)
@@ -285,9 +275,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function pureNegate(arr: number[]): number[] {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ==========================================================================  **
 ## 3. Other TypeScript Features (30 pts)
@@ -298,7 +287,6 @@ these language features in other languages (e.g., C/Java). We'll also get more p
 with writing pure functions.
 
 ** ============================================================================ */
-
 
 /* ----------------------------------------------------- **
 ### 3a. Complete the function definition below. (10 pts)
@@ -321,9 +309,8 @@ Example:
 ** ----------------------------------------------------- */
 
 export function copyArray<T>(arr: T[]): T[] {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 3b. Complete the function definition below. (10 pts)
@@ -350,10 +337,11 @@ for (const [key, val] of Object.entries(dict)) {
 >> "world" 2
 ** ----------------------------------------------------- */
 
-export function copyDictionary(dict: {[key: string]: number}): {[key: string]: number} {
-    throw Error("TODO");
+export function copyDictionary(dict: { [key: string]: number }): {
+  [key: string]: number;
+} {
+  throw Error('TODO');
 }
-
 
 /* ----------------------------------------------------- **
 ### 3c. Complete the function definition below. (10 pts)
@@ -379,15 +367,14 @@ Example:
 ** ----------------------------------------------------- */
 
 type tsRecord = {
-    myStr: string,
-    myNum: number,
-    myDict: {[key: string]: number}
-}
+  myStr: string;
+  myNum: number;
+  myDict: { [key: string]: number };
+};
 
 export function copyTsRecord(tsRec: tsRecord): tsRecord {
-    throw Error("TODO");
+  throw Error('TODO');
 }
-
 
 /* ==========================================================================  **
 ## Bonus. (10 pts)
@@ -399,11 +386,13 @@ dictionary!
 ** ============================================================================ */
 
 type genericTsRecord<T> = {
-    myStr: string,
-    myNum: number,
-    myDict: {[key: string]: T}
-}
+  myStr: string;
+  myNum: number;
+  myDict: { [key: string]: T };
+};
 
-export function copyGenericTsRecord<T>(tsRec: genericTsRecord<T>): genericTsRecord<T> {
-    throw Error("BONUS TODO");
+export function copyGenericTsRecord<T>(
+  tsRec: genericTsRecord<T>
+): genericTsRecord<T> {
+  throw Error('BONUS TODO');
 }

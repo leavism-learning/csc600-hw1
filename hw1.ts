@@ -200,7 +200,26 @@ Example:
 ** ----------------------------------------------------- */
 
 export function shortestAndLongestWord(arr: string[]): [string, string] {
-  throw Error('TODO');
+  if (!arr.length) {
+    return ['', ''];
+  }
+
+  let shortest: string = arr[0];
+  let longest: string = arr[0];
+
+  for (let i = 1; i < arr.length; i++) {
+    // Check for shortest word
+    if (arr[i].length < shortest.length) {
+      shortest = arr[i];
+    }
+
+    // Check for longest word
+    if (arr[i].length >= longest.length) {
+      longest = arr[i];
+    }
+  }
+
+  return [shortest, longest];
 }
 
 /* ==========================================================================  **

@@ -375,7 +375,13 @@ Example:
 ** ----------------------------------------------------- */
 
 export function copyArray<T>(arr: T[]): T[] {
-  throw Error('TODO');
+  let resultArray: T[] = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    resultArray.push(arr[i]);
+  }
+
+  return resultArray;
 }
 
 /* ----------------------------------------------------- **
@@ -406,7 +412,15 @@ for (const [key, val] of Object.entries(dict)) {
 export function copyDictionary(dict: { [key: string]: number }): {
   [key: string]: number;
 } {
-  throw Error('TODO');
+  const resultDictionary: { [key: string]: number } = {};
+
+  for (let key in dict) {
+    // Checks for only dict's properties and not properties
+    // inherited from prototype chain
+    if (dict.hasOwnProperty(key)) resultDictionary[key] = dict[key];
+  }
+
+  return resultDictionary;
 }
 
 /* ----------------------------------------------------- **

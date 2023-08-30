@@ -267,7 +267,9 @@ Example:
 ** ----------------------------------------------------- */
 
 export function impureNegate(arr: number[]): void {
-  throw Error('TODO');
+  for (let i = 0; i < arr.length; i++) {
+    arr[i] = -arr[i];
+  }
 }
 
 /* ----------------------------------------------------- **

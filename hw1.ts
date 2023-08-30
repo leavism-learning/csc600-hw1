@@ -453,7 +453,11 @@ type tsRecord = {
 };
 
 export function copyTsRecord(tsRec: tsRecord): tsRecord {
-  throw Error('TODO');
+  return {
+    myStr: tsRec.myStr,
+    myNum: tsRec.myNum,
+    myDict: copyDictionary(tsRec.myDict),
+  };
 }
 
 /* ==========================================================================  **
@@ -474,5 +478,22 @@ type genericTsRecord<T> = {
 export function copyGenericTsRecord<T>(
   tsRec: genericTsRecord<T>
 ): genericTsRecord<T> {
-  throw Error('BONUS TODO');
+  // Scoped function that copies a generic dict
+  function copyGenericDict<T>(dict: { [key: string]: T }) {
+    const resultDictionary: { [key: string]: T } = {};
+
+    for (let key in dict) {
+      // Checks for only dict's properties and not properties
+      // inherited from prototype chain
+      if (dict.hasOwnProperty(key)) resultDictionary[key] = dict[key];
+    }
+
+    return resultDictionary;
+  }
+
+  return {
+    myStr: tsRec.myStr,
+    myNum: tsRec.myNum,
+    myDict: copyGenericDict(tsRec.myDict),
+  };
 }

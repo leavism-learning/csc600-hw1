@@ -335,7 +335,13 @@ Example:
 ** ----------------------------------------------------- */
 
 export function pureNegate(arr: number[]): number[] {
-  throw Error('TODO');
+  const resultArray: number[] = [];
+
+  for (let i = 0; i < arr.length; i++) {
+    resultArray.push(-arr[i]);
+  }
+
+  return resultArray;
 }
 
 /* ==========================================================================  **

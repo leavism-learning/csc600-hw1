@@ -1,7 +1,6 @@
 *.js
 
 /dist
-/tests
 /node_modules
 
 datetime.txt
